@@ -4,3 +4,57 @@ build_projects_mapping:
 lambdas:
   api_handler:
     runtime: java
+events:
+- operation: deploy
+  initiator: User
+  bundle_name: task05_240526.210646
+  deploy_name: task05
+  time_start: '2024-05-26T21:07:31Z'
+  time_end: '2024-05-26T21:08:19Z'
+  duration_sec: 47.805
+- operation: build
+  initiator: User
+  bundle_name: task05_240526.210646
+  time_start: '2024-05-26T21:06:47Z'
+  time_end: '2024-05-26T21:07:16Z'
+  duration_sec: 28.913
+- operation: upload
+  initiator: User
+  bundle_name: task05_240526.210646
+  time_start: '2024-05-26T21:06:59Z'
+  time_end: '2024-05-26T21:07:16Z'
+  duration_sec: 16.856
+- operation: package_meta
+  initiator: User
+  bundle_name: task05_240526.210646
+  time_start: '2024-05-26T21:06:58Z'
+  time_end: '2024-05-26T21:06:58Z'
+  duration_sec: 0.004
+- operation: assemble
+  initiator: User
+  bundle_name: task05_240526.210646
+  time_start: '2024-05-26T21:06:48Z'
+  time_end: '2024-05-26T21:06:58Z'
+  duration_sec: 10.128
+- operation: assemble_java_mvn
+  initiator: User
+  bundle_name: task05_240526.210646
+  time_start: '2024-05-26T21:06:48Z'
+  time_end: '2024-05-26T21:06:58Z'
+  duration_sec: 10.124
+- operation: test
+  initiator: User
+  time_start: '2024-05-26T21:06:48Z'
+  time_end: '2024-05-26T21:06:48Z'
+locks:
+  modification_lock:
+    last_modification_date: '2024-05-26T21:08:19Z'
+    locked_till: null
+    initiator: User
+latest_deploy:
+  initiator: User
+  bundle_name: task05_240526.210646
+  deploy_name: task05
+  time_start: '2024-05-26T21:07:31Z'
+  time_end: '2024-05-26T21:08:19Z'
+  duration_sec: 47.805
