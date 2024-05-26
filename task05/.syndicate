@@ -1,0 +1,6 @@
+name: task05
+build_projects_mapping:
+  java: jsrc/main/java
+lambdas:
+  api_handler:
+    runtime: java
