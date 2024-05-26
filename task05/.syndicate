@@ -7,6 +7,48 @@ lambdas:
 events:
 - operation: deploy
   initiator: User
+  bundle_name: task05_240526.212429
+  deploy_name: task05
+  time_start: '2024-05-26T21:25:18Z'
+  time_end: '2024-05-26T21:25:39Z'
+  duration_sec: 21.437
+- operation: build
+  initiator: User
+  bundle_name: task05_240526.212429
+  time_start: '2024-05-26T21:24:29Z'
+  time_end: '2024-05-26T21:25:07Z'
+  duration_sec: 37.385
+- operation: upload
+  initiator: User
+  bundle_name: task05_240526.212429
+  time_start: '2024-05-26T21:24:46Z'
+  time_end: '2024-05-26T21:25:07Z'
+  duration_sec: 20.929
+- operation: package_meta
+  initiator: User
+  bundle_name: task05_240526.212429
+  time_start: '2024-05-26T21:24:45Z'
+  time_end: '2024-05-26T21:24:45Z'
+  duration_sec: 0.006
+- operation: assemble
+  initiator: User
+  bundle_name: task05_240526.212429
+  time_start: '2024-05-26T21:24:30Z'
+  time_end: '2024-05-26T21:24:45Z'
+  duration_sec: 14.907
+- operation: assemble_java_mvn
+  initiator: User
+  bundle_name: task05_240526.212429
+  time_start: '2024-05-26T21:24:30Z'
+  time_end: '2024-05-26T21:24:45Z'
+  duration_sec: 14.887
+- operation: test
+  initiator: User
+  time_start: '2024-05-26T21:24:30Z'
+  time_end: '2024-05-26T21:24:30Z'
+  duration_sec: 0.001
+- operation: deploy
+  initiator: User
   bundle_name: task05_240526.211704
   deploy_name: task05
   time_start: '2024-05-26T21:17:53Z'
@@ -89,13 +131,13 @@ events:
   time_end: '2024-05-26T21:06:48Z'
 locks:
   modification_lock:
-    last_modification_date: '2024-05-26T21:18:15Z'
+    last_modification_date: '2024-05-26T21:25:39Z'
     locked_till: null
     initiator: User
 latest_deploy:
   initiator: User
-  bundle_name: task05_240526.211704
+  bundle_name: task05_240526.212429
   deploy_name: task05
-  time_start: '2024-05-26T21:17:53Z'
-  time_end: '2024-05-26T21:18:15Z'
-  duration_sec: 21.691
+  time_start: '2024-05-26T21:25:18Z'
+  time_end: '2024-05-26T21:25:39Z'
+  duration_sec: 21.437
