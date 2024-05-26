@@ -1,57 +1,64 @@
 {
-  "sqs_handler" : {
-    "name" : "sqs_handler",
-    "lambda_path" : "D:\\pythonandaws\\task03\\epamdemo\\task04",
-    "version" : "1.0.0",
-    "func_name" : "com.task04.SqsHandler",
-    "deployment_package" : "task04-1.0.0.jar",
-    "resource_type" : "lambda",
-    "runtime" : "java11",
-    "architectures" : [ "x86_64" ],
-    "iam_role_name" : "sqs_handler-role",
-    "memory" : 1024,
-    "timeout" : 300,
-    "subnet_ids" : [ ],
-    "security_group_ids" : [ ],
-    "dependencies" : [ {
-      "resource_name" : "async_queue",
-      "resource_type" : "sqs_queue"
-    } ],
-    "event_sources" : [ {
-      "resource_type" : "sqs_trigger",
-      "target_queue" : "async_queue",
-      "batch_size" : 10
-    } ],
-    "env_variables" : { },
-    "publish_version" : false,
-    "logs_expiration" : "${logs_expiration}",
-    "snap_start" : "None"
+  "lambda-basic-execution": {
+    "policy_content": {
+      "Statement": [
+        {
+          "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "dynamodb:GetItem",
+            "dynamodb:Query",
+            "dynamodb:PutItem",
+            "dynamodb:Batch*",
+            "dynamodb:DeleteItem",
+            "ssm:PutParameter",
+            "ssm:GetParameter",
+            "kms:Decrypt",
+            "sqs:*",
+            "sns:*",
+            "sqs:ReceiveMessage"
+          ],
+          "Effect": "Allow",
+          "Resource": "*"
+        }
+      ],
+      "Version": "2012-10-17"
+    },
+    "resource_type": "iam_policy"
   },
-  "sns_handler" : {
-    "name" : "sns_handler",
-    "lambda_path" : "D:\\pythonandaws\\task03\\epamdemo\\task04",
-    "version" : "1.0.0",
-    "func_name" : "com.task04.SnsHandler",
-    "deployment_package" : "task04-1.0.0.jar",
-    "resource_type" : "lambda",
-    "runtime" : "java11",
-    "architectures" : [ "x86_64" ],
-    "iam_role_name" : "sns_handler-role",
-    "memory" : 1024,
-    "timeout" : 300,
-    "subnet_ids" : [ ],
-    "security_group_ids" : [ ],
-    "dependencies" : [ {
-      "resource_name" : "lambda_topic",
-      "resource_type" : "sns_topic"
-    } ],
-    "event_sources" : [ {
-      "resource_type" : "sns_topic_trigger",
-      "target_topic" : "lambda_topic"
-    } ],
-    "env_variables" : { },
-    "publish_version" : false,
-    "logs_expiration" : "${logs_expiration}",
-    "snap_start" : "None"
+  "sqs_handler-role": {
+    "predefined_policies": [],
+    "principal_service": "lambda",
+    "custom_policies": [
+      "lambda-basic-execution"
+    ],
+    "resource_type": "iam_role"
+  },
+  "async_queue": {
+    "resource_type": "sqs_queue",
+    "region": "eu-central-1",
+    "fifo_queue": false,
+    "visibility_timeout": 300,
+    "delay_seconds": 0,
+    "maximum_message_size": 1024,
+    "message_retention_period": 60,
+    "receive_message_wait_time_seconds": 0,
+    "policy": {},
+    "redrive_policy": {},
+    "content_based_deduplication": false
+  },
+  "sns_handler-role": {
+    "predefined_policies": [],
+    "principal_service": "lambda",
+    "custom_policies": [
+      "lambda-basic-execution"
+    ],
+    "resource_type": "iam_role"
+  },
+  "lambda_topic": {
+    "resource_type": "sns_topic",
+    "region": "eu-central-1",
+    "event_sources": []
   }
 }
