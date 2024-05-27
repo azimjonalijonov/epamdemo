@@ -26,7 +26,7 @@ import java.util.UUID;
 //@DynamoDbEvents
 public class AuditProducer implements RequestHandler<Object, Map<String, Object>> {
 
-	private static final String AUDIT_TABLE_NAME = "cmtr-580435c6-Audit-test";
+	private static final String AUDIT_TABLE_NAME = "cmtr-4d2d00ed-Audit-test";
 	private final AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
 	private final DynamoDB dynamoDB = new DynamoDB(client);
 
