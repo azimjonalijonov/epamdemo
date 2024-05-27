@@ -5,6 +5,41 @@ lambdas:
   api_handler:
     runtime: java
 events:
+- operation: build
+  initiator: User
+  bundle_name: task05_240526.232956
+  time_start: '2024-05-26T23:29:58Z'
+  time_end: '2024-05-26T23:31:11Z'
+  duration_sec: 72.722
+- operation: upload
+  initiator: User
+  bundle_name: task05_240526.232956
+  time_start: '2024-05-26T23:30:22Z'
+  time_end: '2024-05-26T23:31:11Z'
+  duration_sec: 48.727
+- operation: package_meta
+  initiator: User
+  bundle_name: task05_240526.232956
+  time_start: '2024-05-26T23:30:20Z'
+  time_end: '2024-05-26T23:30:20Z'
+  duration_sec: 0.004
+- operation: assemble
+  initiator: User
+  bundle_name: task05_240526.232956
+  time_start: '2024-05-26T23:30:01Z'
+  time_end: '2024-05-26T23:30:20Z'
+  duration_sec: 19.285
+- operation: assemble_java_mvn
+  initiator: User
+  bundle_name: task05_240526.232956
+  time_start: '2024-05-26T23:30:01Z'
+  time_end: '2024-05-26T23:30:20Z'
+  duration_sec: 19.268
+- operation: test
+  initiator: User
+  time_start: '2024-05-26T23:30:01Z'
+  time_end: '2024-05-26T23:30:01Z'
+  duration_sec: 0.001
 - operation: deploy
   initiator: User
   bundle_name: task05_240526.212429
