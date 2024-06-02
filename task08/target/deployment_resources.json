@@ -1,7 +1,7 @@
 {
   "api_handler" : {
     "name" : "api_handler",
-    "lambda_path" : "C:\\Users\\Najimof\\Documents\\Epam\\AWS Serverless\\demo\\task08",
+    "lambda_path" : "D:\\pythonandaws\\task03\\epamdemo\\task08",
     "version" : "1.0.0",
     "func_name" : "com.task08.ApiHandler",
     "deployment_package" : "task08-1.0.0.jar",
